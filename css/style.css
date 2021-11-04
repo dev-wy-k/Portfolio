@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;500;800&display=swap');
+
+*{
+    font-family: 'Exo', sans-serif;
+    outline: none !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    height: .2em;
+    width: .2em;
+    background: #080808;
+}
+::-webkit-scrollbar-thumb{
+    background: #f2542d90;
+    background-size: .2em;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-corner{
+    border-radius: 10px;
+}
+
+body{
+    background-image: linear-gradient(307deg, transparent 0%, transparent 10%,rgba(190, 190, 190,0.04) 10%, rgba(190, 190, 190,0.04) 64%,transparent 64%, transparent 100%),linear-gradient(118deg, transparent 0%, transparent 11%,rgba(190, 190, 190,0.04) 11%, rgba(190, 190, 190,0.04) 31%,transparent 31%, transparent 100%),linear-gradient(73deg, transparent 0%, transparent 22%,rgba(190, 190, 190,0.04) 22%, rgba(190, 190, 190,0.04) 90%,transparent 90%, transparent 100%),linear-gradient(156deg, transparent 0%, transparent 51%,rgba(190, 190, 190,0.04) 51%, rgba(190, 190, 190,0.04) 97%,transparent 97%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+    background-size: contain;
+}
+.nv-bar{
+    position: fixed !important;
+    top : 0 !important;
+    z-index: 10 !important;
+    width: 100%;
+    background: #080808;
+}
+.nv-bar .logo{
+    font-size: 30px;
+}
+.nav-link.current-section{
+    border-bottom: 3px solid #f2542d;
+    border-right: 3px solid #f2542d;
+    border-radius: 10px !important;
+}
+.social-icon{
+    font-size: 25px;
+}
+.social-icon:hover{
+    transform: scale(1.4);
+}
+.about-ico{
+    transition: 0.5s;
+}
+.about-ico:hover{
+    transform: scale(1.05) rotate(3deg);
+}
+.service-card, .skill-card, .form-control{
+    background-color: #1f1f1f !important;
+    border: none !important;
+}
+.service-card-body{
+    
+    transition: 0.5s;
+}
+.service-card-body:hover{
+    z-index: 1001 !important;
+    transform:scale(0.97)
+}
+.serv-ico{
+    height: 150px !important;
+    transition: 0.5s;
+}
+.serv-ico:hover{
+    transform: translateX(10px)  scale(1.1);
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent !important;
+    border: 2px solid #f2542d !important;
+    border-radius: 50% !important;
+}
+.slick-dots li.slick-active{
+    width: 15px !important; 
+    height: 15px !important;
+    background-color: #f2542d !important;
+}
+.skill-card{
+    transition: 0.5s;
+}
+.skill-card:hover, .form-control:hover{
+    transform: scale(1.02) !important;
+}
+.card-header .skill-logo{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+.card-header .skill-logo:hover{
+    transform: rotate(10deg);
+}
+.footer{
+    background-image: linear-gradient(45deg, transparent 0%, transparent 46%,rgba(114, 114, 114,0.06) 46%, rgba(114, 114, 114,0.06) 70%,transparent 70%, transparent 100%),linear-gradient(135deg, transparent 0%, transparent 59%,rgba(114, 114, 114,0.06) 59%, rgba(114, 114, 114,0.06) 91%,transparent 91%, transparent 100%),linear-gradient(0deg, transparent 0%, transparent 15%,rgba(114, 114, 114,0.06) 15%, rgba(114, 114, 114,0.06) 40%,transparent 40%, transparent 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+    background-size: cover;
+}
+/* animation  */
+.pulse{
+    animation: pulse 2s infinite;
+}
+.shakeX{
+    animation: shakeX 10s infinite;
+}
+.ani-delay-1{
+    animation-delay: 0.5s;
+}
+.ani-delay-2{
+    animation-delay: 1s;
+}
+.ani-delay-3{
+    animation-delay: 1.5s;
+}
+.ani-delay-4{
+    animation-delay: 2s;
+}
+.ani-delay-5{
+    animation-delay: 2.5s;
+}
+.top{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.top i{
+    color: #f2542d40;
+}
+
+@media screen and (max-width: 780px) {
+    .navbar{
+        padding: 3px !important;
+        margin: 0!important;
+    }
+    .nav-link{
+        background-color: #d4c7b030;
+        padding: 5px 10px !important;
+        text-align: center !important;
+        margin: 10px 0;
+        border-radius: 10px !important;
+    }
+    .nav-link:hover{
+        opacity: 0.9;
+    }
+    .nav-link.current-section{
+        border-bottom: 3px solid #f2542d;
+        border-top: 3px solid #f2542d;
+        border-right: none;
+        border-radius: 10px !important;
+    }
+    .home-txt{
+        text-align: center !important;
+    }
+    .about-container{
+        text-align: center !important;
+    }
+    .top{
+        bottom: 75px;
+        right: 47%;
+    }
+}
