@@ -1,20 +1,17 @@
 let screenHeight = $(window).height();
-// console.log(screenHeight);
 
-$(window).scroll(function (){
-    let currentPostion = $(this).scrollTop();
-    // console.log(currentPostion);
+// $(window).scroll(function (){
+//     let currentPostion = $(this).scrollTop();
+//     // console.log(currentPostion);
 
-    if(currentPostion >= screenHeight-50){
+//     if(currentPostion >= screenHeight-50){
         
-    }
-    else{
+//     }
+//     else{
         
-        setActive('home')
-    }
-});
-
-
+//         setActive('home')
+//     }
+// });
 
     wow = new WOW(
         {
@@ -37,24 +34,32 @@ function setActive(current){
 
 function navScorll() {
 
-    let currentSection = $("section[id]");
-    // console.log(currentSection);
-    currentSection.waypoint(function (direction){
+    // using js to active nav bar 
+    $(document).scroll(function () {
+        $('section').each(function () {
+            if($(this).position().top <= $(document).scrollTop() && ($(this).position().top + $(this).outerHeight()) > $(document).scrollTop()) {
+                setActive($(this).attr('id'))
+            }
+        });
+    });
 
-        if(direction == "down"){
-            let currentSectionId = $(this.element).attr("id") ;
-            // console.log(currentSectionId);
-            setActive(currentSectionId)
-        }
-    },{ offset : "5%" });
+    // let currentSection = $("section[id]");
+    // currentSection.waypoint(function (direction){
+    //     console.log(direction);
+    //     if(direction == "down"){
+    //         let currentSectionId = $(this.element).attr("id") ;
+    //         // console.log(currentSectionId);
+    //         setActive(currentSectionId)
+    //     }
+    // },{ offset : "5%" });
 
-    currentSection.waypoint(function (direction) {
-        if(direction == "up"){
-            let currentSectionId = $(this.element).attr("id") ;
-            // console.log(currentSectionId);
-            setActive(currentSectionId)
-        }
-    },{ offset : "-20%" });
+    // currentSection.waypoint(function (direction) {
+    //     if(direction == "up"){
+    //         let currentSectionId = $(this.element).attr("id") ;
+    //         // console.log(currentSectionId);
+    //         setActive(currentSectionId)
+    //     }
+    // },{ offset : "-20%" });
 };
 navScorll();
 
